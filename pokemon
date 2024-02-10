@@ -1,5 +1,3 @@
-"""Project 2 - Aidan Scafidi."""
-
 import random
 
 
@@ -51,7 +49,7 @@ class WaterType(Pokemon):
         # run attack
         super().attack(other)
         # check to see if pokemon paralyzed
-        if random.random() < self.prob and type(other) != WaterType:
+        if random() < self.prob and type(other) != WaterType:
             other.paralyzed = True
             print(other.name, "is paralyzed!")
         # reset damage to original
